@@ -1,24 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
 	<title>MCFS - Cash Register</title>
+	<script type="text/javascript" src="CashRegister.js"></script>
     </head>
     <body>
+      <h1><img src="http://content.sportslogos.net/logos/2/561/full/hety9fpz4nzlhdh2pwoxhcsxo.gif"
+	      style="float:right" width="200" height="200">Morgantown College</h1>
 	<div id="Container">
 	    <div id="Form">
-		<form>
+		<form name="bill_of_sale" method="post" onsubmit="return validateForm()">
 		    <label for="location">Location :</label>
 		    <select id="location">
-			<option value="Option1">Option1</option>
-			<option value="Option2">Option2</option>
-			<option value="Option3">Option3</option>
-		    </select>
-		    <label for="payment">Payment :</label>
-		    <input type="radio" name="payment" value="mealPlan">Meal Plan</input>
-		    <input type="radio" name="payment" value="diningDollars">Dining Dollars</input>
-		    <input type="radio" name="payment" value="cash_credit">Cash/Credit</input>
-		    <input type="radio" name="payment" value="combination">Combination</input>
+		        <option value="none">Choose Restaurant</option>
+			<option value="Option1">Restaurant1</option>
+			<option value="Option2">Restaurant2</option>
+			<option value="Option3">Restaurant3</option>
+		    </select><br></br>
+		    <label for="amount">Amount :</label><br></br>
+		    <input type="number" name="amount"><br></br>
+		    <label for="payment">Payment :</label><br></br>
+		    <input type="radio" name="payment" value="mealPlan">Meal Plan</input><br></br>
+		    <input type="radio" name="payment" value="diningDollars">Dining Dollars</input><br></br>
+		    <input type="radio" name="payment" value="cash_credit">Cash/Credit</input><br></br>
+		    <input type="radio" name="payment" value="combination">Combination</input><br></br>
 
-		    <input type="submit" value="Submit" />
+		    <input type="submit" value="Continue" />
 		</form>
 	    </div>	
 	</div>
